@@ -1,0 +1,49 @@
+# game components - > UI (displays ground and score ), Players, Engine that plays, User interaction,
+# database where the score and statistics are stored
+
+
+# Ui has a background picture of cricket ground displayed in 2d
+# cricket ground has a 30yard circle and a boundary circle
+# ui has 11 players for Team A displayed in RED and 2 players for Team B displayed in Blue
+# ui has 2 umpires displayed in red and one ball displayed in purple
+# on top right or top left the ui displays score.
+
+# Flow -> There will be a class players from where Team A and Team B will select 11 players each, They must
+# choose 1 wkt-keeper and batsman and bowlers are there choice.
+
+# after the team is made the Two captains chosen will go for toss and then decide to bat or bowl
+# every game is of 5 overs as of now will increase as per demand.
+# now the Team A will send there batsman, and they will bat until all 10 wickets are down or innings is over
+# team b will pick one bowler every over and bowl till all wickets are down or overs are exhausted , ie innings over
+
+# also, the chasing team must play till they win , loose before match is over
+
+# Separating classes -> (A) outcomes should be class which defines the possible outcomes of every event.
+# what is an event -> when a ball is played it is an event
+# it can have outcomes Runs -> 0 , 1 , 2, ... 6, 6NB , Wd .. B, LB , wicket
+# -> to get to outcomes we may run one function to get the outcome for run
+# say for example from runs{ 0,1,2,3,4,5,6 } we get 4 then we can check was it a fair delivery ,
+# since we got 4 it might also be a no-ball hence we can add 1 more run to it and display the output as
+# 4NB -> either we can hardcode all the possible outcomes or make functions to decide weather the calculated
+# outcome is valid or not. I think since we don't have a lot of outcomes we can just hardcode it.
+
+# continued in separating classes -> every event(ball) must run till 6 fair delivers are played and 1
+# over is completed
+# after the completion of over the bowler must be changed. also in every event if the strike
+# is rotated we must change the batsman on strike.
+
+# that means we have to make two functions to run on loop that decides which batsman is on strike and
+# has the required no of fair deliveries(6) being played
+
+# this process will be repeated till one innings is over and the chasing team will get a target to chase
+# this will also be played with one more variable 'i.e' target runs
+
+# miscellaneous -> since we want to generated data for each game lets plan the tables or variables for storing
+# the data, -> every match must have a match id -> Teams playing ( players ) -> scoreboard and result
+
+# generating Team id for each game for team a and b with players
+
+
+# import and programmatic starts here, add comments above this line
+
+@5/15/2022 -> yet to update implement scoreboard and UI
